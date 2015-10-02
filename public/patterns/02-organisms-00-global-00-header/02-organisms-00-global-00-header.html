@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Pattern Lab</title>
+
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../css/style.css?1443798266" rel="stylesheet" media="all" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
+			<!-- never cache patterns -->
+		<meta http-equiv="cache-control" content="max-age=0" />
+		<meta http-equiv="cache-control" content="no-cache" />
+		<meta http-equiv="expires" content="0" />
+		<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+		<meta http-equiv="pragma" content="no-cache" />
+		
+		<link rel="stylesheet" href="../../styleguide/css/styleguide.css?1443798266" media="all">
+		<link rel="stylesheet" href="../../styleguide/css/styleguide-specific.css?1443798266" media="all" />
+		
+
+	<!-- End Pattern Lab -->
+
+  </head>
+  <body class="container">
+
+		<header>
+	<div class="logo">eLife Publishing Dashboard</div>	<nav class="navbar">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapse" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <!-- <a class="navbar-brand" href="#">">Brand</a> -->
+	    </div>
+	    <div class="collapse navbar-collapse" id="nav-collapse">
+	      <ul class="nav navbar-nav">
+	        <li class="active dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Monitoring <span class="caret"></span> <span class="sr-only">(current)</span></a>
+	          <ul class="dropdown-menu">
+	            <li><a href="#">Submission</a></li>
+	            <li><a href="#">Content Processing</a></li>
+	            <li><a href="#">Publishing</a></li>
+	            <!-- <li role="separator" class="divider"></li> -->
+	            <!-- <li><a href="#">Separated link</a></li> -->
+	          </ul>
+	        </li>
+	        <li><a href="#">Reporting</a></li>
+	        <li><a href="#">Another link</a></li>
+	      </ul>
+	    </div>
+	</nav>
+	<ol class="breadcrumb">
+	    <li><a href="#">Monitoring</a></li>
+	    <li><a href="#">Publishing</a></li>
+	    <li><a href="#">Current</a></li>
+	    <li>Item 10.7554/eLife.04640</li>
+	</ol>
+	<ul class="nav nav-tabs">
+	    <li role="presentation" class="active"><a href="#">Current</a></li>
+	    <li role="presentation"><a href="#">Archive</a></li>
+	</ul>
+</header>
+	<!--DO NOT REMOVE-->
+		
+	<script>
+		// handle injection of items from PHP
+		var patternPartial = "organisms-header";
+		var lineage        = [{"lineagePattern":"atoms-logo","lineagePath":"..\/..\/patterns\/00-atoms-04-images-00-logo\/00-atoms-04-images-00-logo.html"},{"lineagePattern":"molecules-primary-nav","lineagePath":"..\/..\/patterns\/01-molecules-05-navigation-00-primary-nav\/01-molecules-05-navigation-00-primary-nav.html"},{"lineagePattern":"molecules-breadcrumbs","lineagePath":"..\/..\/patterns\/01-molecules-05-navigation-02-breadcrumbs\/01-molecules-05-navigation-02-breadcrumbs.html"},{"lineagePattern":"molecules-tabs","lineagePath":"..\/..\/patterns\/01-molecules-05-navigation-04-tabs\/01-molecules-05-navigation-04-tabs.html"}];
+		var lineageR       = [{"lineagePattern":"templates-dashboard","lineagePath":"..\/..\/patterns\/03-templates-00-dashboard\/03-templates-00-dashboard.html"},{"lineagePattern":"templates-blog","lineagePath":"..\/..\/patterns\/03-templates-01-blog\/03-templates-01-blog.html"},{"lineagePattern":"templates-article","lineagePath":"..\/..\/patterns\/03-templates-02-article\/03-templates-02-article.html"},{"lineagePattern":"pages-blog","lineagePath":"..\/..\/patterns\/04-pages-01-blog\/04-pages-01-blog.html"}];
+		var patternState   = "";
+		var cssEnabled     = false;
+	</script>
+		<script>
+		/*!
+		 * scriptLoader - v0.1
+		 *
+		 * Copyright (c) 2014 Dave Olsen, http://dmolsen.com
+		 * Licensed under the MIT license
+		 *
+		 */
+		
+		var scriptLoader = {
+			
+			run: function(js,cb,target) {
+				var s  = document.getElementById(target+'-'+cb); 
+				for (var i = 0; i < js.length; i++) {
+					var src = (typeof js[i] != "string") ? js[i].src : js[i];
+					var c   = document.createElement('script');
+					c.src   = '../../'+src+'?'+cb;
+					if (typeof js[i] != "string") {
+						if (js[i].dep !== undefined) {
+							c.onload = function(dep,cb,target) {
+								return function() {
+									scriptLoader.run(dep,cb,target);
+								}
+							}(js[i].dep,cb,target);
+						}
+					}
+					s.parentNode.insertBefore(c,s);
+				}
+			}
+			
+		}
+	</script>
+	<script id="pl-js-polyfill-insert-1443798266">
+		(function() {
+			if (self != top) {
+				var cb = '1443798266';
+				var js = [];
+				if (typeof document !== "undefined" && !("classList" in document.documentElement)) {
+					js.push("styleguide/js/vendor/classlist-polyfill.js");
+				}
+				scriptLoader.run(js,cb,'pl-js-polyfill-insert');
+			}
+		})();
+	</script>
+	<script id="pl-js-insert-1443798266">
+		(function() {
+			if (self != top) {
+				var cb = '1443798266';
+				var js = [ { "src": "styleguide/js/vendor/jwerty.js", "dep": [ "styleguide/js/postmessage.js", { "src": "data/annotations.js", "dep": [ "styleguide/js/annotations-pattern.js" ] }, "styleguide/js/code-pattern.js" ] } ];
+				scriptLoader.run(js,cb,'pl-js-insert');
+			}
+		})();
+	</script>
+	
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  </body>
+</html>
