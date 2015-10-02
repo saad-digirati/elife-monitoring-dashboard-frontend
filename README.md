@@ -1,3 +1,9 @@
+## Instructions
+
+Mac 
+- Run a server locally in the public/ folder with "python -m SimpleHTTPServer"
+- Type "php core/builder.php -wr" - to watch & auto-reload server - in the root folder of the project
+
 ## About Pattern Lab
 - [Pattern Lab Website](http://patternlab.io/)
 - [About Pattern Lab](http://patternlab.io/about.html)
